@@ -3,19 +3,6 @@
 <meta content="text/html; charset=utf-8" http-equiv="content-type">
 <meta name="generator" content="ReSpec 32.1.10 Logius profile 20220628">
 <style>
-.issue-label{text-transform:initial}
-.warning>p:first-child{margin-top:0}
-.warning{padding:.5em;border-left-width:.5em;border-left-style:solid}
-span.warning{padding:.1em .5em .15em}
-.issue.closed span.issue-number{text-decoration:line-through}
-.issue.closed span.issue-number::after{content:" (Closed)";font-size:smaller}
-.warning{border-color:#f11;border-width:.2em;border-style:solid;background:#fbe9e9}
-.warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}
-li.task-list-item{list-style:none}
-input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}
-.issue a.respec-gh-label{padding:5px;margin:0 2px 0 2px;font-size:10px;text-transform:none;text-decoration:none;font-weight:700;border-radius:4px;position:relative;bottom:2px;border:none;display:inline-block}
-</style>
-<style>
 dfn{cursor:pointer}
 .dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;color:#000;box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);border-radius:2px}
 .dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
@@ -117,20 +104,6 @@ ul.index code{color:inherit}
 </style>
 <meta name="description" content="In dit document worden de volgende standaarden beschreven en met elkaar vergeleken:">
 <style>
-.hljs{display:block;overflow-x:auto;padding:.5em;color:#383a42;background:#fafafa}
-.hljs-comment,.hljs-quote{color:#717277;font-style:italic}
-.hljs-doctag,.hljs-formula,.hljs-keyword{color:#a626a4}
-.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#ca4706;font-weight:700}
-.hljs-literal{color:#0b76c5}
-.hljs-addition,.hljs-attribute,.hljs-meta-string,.hljs-regexp,.hljs-string{color:#42803c}
-.hljs-built_in,.hljs-class .hljs-title{color:#9a6a01}
-.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#986801}
-.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#336ae3}
-.hljs-emphasis{font-style:italic}
-.hljs-strong{font-weight:700}
-.hljs-link{text-decoration:underline}
-</style>
-<style>
 var{position:relative;cursor:pointer}
 var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}
 var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}
@@ -191,8 +164,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "authors": [
         "T. Preston-Werner"
       ],
-      "date": "June 2013",
-      "id": "semver"
+      "date": "June 2013"
     }
   },
   "publishISODate": "2022-06-24T00:00:00.000Z",
@@ -258,39 +230,13 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <li>httpbis-message-signatures</li>
 </ul>
 </section>
-  <section id="sotd" class="introductory"><h2>Status van dit document</h2>Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen door de werkgroep goedgekeurde consultatieversie.<p></p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#niet-normatieve-deel"><bdi class="secno">1. </bdi>Niet-normatieve deel</a></li><li class="tocline"><a class="tocxref" href="#meer-inhoud"><bdi class="secno">2. </bdi>Meer inhoud</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#afbeeldingen"><bdi class="secno">2.1 </bdi>Afbeeldingen</a></li><li class="tocline"><a class="tocxref" href="#referenties"><bdi class="secno">2.2 </bdi>Referenties</a></li><li class="tocline"><a class="tocxref" href="#optioneel"><bdi class="secno">2.3 </bdi>Optioneel</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">3. </bdi>Conformiteit</a></li><li class="tocline"><a class="tocxref" href="#tof"><bdi class="secno">4. </bdi>Lijst met figuren</a></li><li class="tocline"><a class="tocxref" href="#index"><bdi class="secno">A. </bdi>Index</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#index-defined-here"><bdi class="secno">A.1 </bdi>Begrippen gedefinieerd door deze specificatie</a></li><li class="tocline"><a class="tocxref" href="#index-defined-elsewhere"><bdi class="secno">A.2 </bdi>Begrippen gedefinieerd door verwijzing</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">B. </bdi>Referenties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normatieve-referenties"><bdi class="secno">B.1 </bdi>Normatieve referenties</a></li></ol></li></ol></nav>
-  <section class="informative" id="niet-normatieve-deel"><div class="header-wrapper"><h2 id="x1-niet-normatieve-deel"><bdi class="secno">1. </bdi>Niet-normatieve deel</h2><a class="self-link" href="#niet-normatieve-deel" aria-label="Permalink for Section 1."></a></div><p><em>Dit onderdeel is niet normatief.</em></p>
-<p>Bijvoorbeeld een introductie.</p>
-<div class="note" role="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="3"><span>Noot</span><span class="issue-label">: index</span></div><p class="">
-Dit hoofdstuk is toegevoegd met <code>class="informative"</code> in <code>index.html</code>.
-</p></div></section>
-  <section id="meer-inhoud"><div class="header-wrapper"><h2 id="x2-meer-inhoud"><bdi class="secno">2. </bdi>Meer inhoud</h2><a class="self-link" href="#meer-inhoud" aria-label="Permalink for Section 2."></a></div>
-<section id="afbeeldingen"><div class="header-wrapper"><h3 id="x2-1-afbeeldingen"><bdi class="secno">2.1 </bdi>Afbeeldingen</h3><a class="self-link" href="#afbeeldingen" aria-label="Permalink for Section 2.1"></a></div>
-<p>Afbeeldingen krijgen een nummer en vermelding in de figurenlijst <a href="#tof" data-matched-text="[[[#tof]]]" class="sec-ref"><bdi class="secno">4. </bdi>Lijst met figuren</a>.</p>
-<p><figure id="fig-onderschrift"><img src="media/Bomos_levenscyclus.svg" alt="Tekstueel alternatief voor toegankelijkheid" title="Onderschrift"><figcaption>Figuur <bdi class="figno">1</bdi> <span class="fig-title">Onderschrift</span></figcaption></figure></p>
-</section><section id="referenties"><div class="header-wrapper"><h3 id="x2-2-referenties"><bdi class="secno">2.2 </bdi>Referenties</h3><a class="self-link" href="#referenties" aria-label="Permalink for Section 2.2"></a></div>
-<p>Referentie uit locale lijst [<cite><a class="bibref" data-link-type="biblio" href="#bib-semver" title="Semantic Versioning 2.0.0">SemVer</a></cite>]. Lijst staat in <code>config.js</code>. Alleen referenties die in de tekst voorkomen worden getoond.</p>
-</section><section id="optioneel"><div class="header-wrapper"><h3 id="x2-3-optioneel"><bdi class="secno">2.3 </bdi>Optioneel</h3><a class="self-link" href="#optioneel" aria-label="Permalink for Section 2.3"></a></div>
-<p>De onderstaande secties (<em>Conformiteit</em> e.d.) zijn optioneel, zie <code>index.html</code>:</p>
-<pre><code aria-busy="false" class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"abstract"</span> <span class="hljs-attr">data-include-format</span>=<span class="hljs-string">"markdown"</span> <span class="hljs-attr">data-include</span>=<span class="hljs-string">"abstract.md"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"sotd"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span><span class="hljs-comment">&lt;!-- Wordt automatisch gevuld --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">data-include-format</span>=<span class="hljs-string">"markdown"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"informative"</span> <span class="hljs-attr">data-include</span>=<span class="hljs-string">"ch01.md"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">data-include-format</span>=<span class="hljs-string">"markdown"</span> <span class="hljs-attr">data-include</span>=<span class="hljs-string">"ch02.md"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-  <span class="hljs-comment">&lt;!-- Hieronder optionele secties. Worden automatisch gevuld --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">'conformance'</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">'tof'</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"index"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
-</code></pre>
-</section></section>
+  <section id="sotd" class="introductory"><h2>Status van dit document</h2>Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen door de werkgroep goedgekeurde consultatieversie.<p></p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">1. </bdi>Conformiteit</a></li><li class="tocline"><a class="tocxref" href="#index"><bdi class="secno">A. </bdi>Index</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#index-defined-here"><bdi class="secno">A.1 </bdi>Begrippen gedefinieerd door deze specificatie</a></li><li class="tocline"><a class="tocxref" href="#index-defined-elsewhere"><bdi class="secno">A.2 </bdi>Begrippen gedefinieerd door verwijzing</a></li></ol></li></ol></nav>
+  <section data-include-format="markdown" class="informative respec-offending-element" data-include="ch01.md" data-include-id="include-028411674820082444" title="`data-include` failed: `ch01.md` (Cannot read properties of undefined (reading 'search')
+Please report this to https://github.com/markedjs/marked.)." id="respec-offender-data-include-failed-ch01-md-cannot-read-properties-of-undefined-reading-search-please-report-this-to-https-github-com-markedjs-marked"></section>
   
-  <section id="conformance"><div class="header-wrapper"><h2 id="x3-conformiteit"><bdi class="secno">3. </bdi>Conformiteit</h2><a class="self-link" href="#conformance" aria-label="Permalink for Section 3."></a></div><p>Naast onderdelen die als niet normatief gemarkeerd zijn, zijn ook alle diagrammen, voorbeelden, en noten in dit document niet normatief. Verder is alles in dit document normatief.</p></section>
-  <section id="tof"><div class="header-wrapper"><h2 id="x4-lijst-met-figuren"><bdi class="secno">4. </bdi>Lijst met figuren</h2><a class="self-link" href="#tof" aria-label="Permalink for Section 4."></a></div><ul class="tof">
-        <li class="tofline">
-    <a class="tocxref" href="#fig-onderschrift">Figuur <bdi class="figno">1</bdi> <span class="fig-title">Onderschrift</span></a>
-  </li>
-      </ul></section>
+  
+  <section id="conformance"><div class="header-wrapper"><h2 id="x1-conformiteit"><bdi class="secno">1. </bdi>Conformiteit</h2><a class="self-link" href="#conformance" aria-label="Permalink for Section 1."></a></div><p>Naast onderdelen die als niet normatief gemarkeerd zijn, zijn ook alle diagrammen, voorbeelden, en noten in dit document niet normatief. Verder is alles in dit document normatief.</p></section>
+  <section id="tof"></section>
   <section id="index" class="appendix"><div class="header-wrapper"><h2 id="a-index"><bdi class="secno">A. </bdi>Index</h2><a class="self-link" href="#index" aria-label="Permalink for Appendix A."></a></div><section id="index-defined-here">
     <div class="header-wrapper"><h3 id="a-1-begrippen-gedefinieerd-door-deze-specificatie"><bdi class="secno">A.1 </bdi>Begrippen gedefinieerd door deze specificatie</h3><a class="self-link" href="#index-defined-here" aria-label="Permalink for Appendix A.1"></a></div>
     <ul class="index">
@@ -304,12 +250,7 @@ Dit hoofdstuk is toegevoegd met <code>class="informative"</code> in <code>index.
   </section></section>
 
 
-<section id="references" class="appendix"><div class="header-wrapper"><h2 id="b-referenties"><bdi class="secno">B. </bdi>Referenties</h2><a class="self-link" href="#references" aria-label="Permalink for Appendix B."></a></div><section id="normatieve-referenties">
-    <div class="header-wrapper"><h3 id="b-1-normatieve-referenties"><bdi class="secno">B.1 </bdi>Normatieve referenties</h3><a class="self-link" href="#normatieve-referenties" aria-label="Permalink for Appendix B.1"></a></div>
-    <dl class="bibliography"><dt id="bib-semver">[SemVer]</dt><dd>
-      <a href="https://semver.org"><cite>Semantic Versioning 2.0.0</cite></a>. T. Preston-Werner. June 2013. URL: <a href="https://semver.org">https://semver.org</a>
-    </dd></dl>
-  </section></section><p role="navigation" id="back-to-top">
+<p role="navigation" id="back-to-top">
     <a href="#title"><abbr title="Back to Top">↑</abbr></a>
   </p><script id="respec-dfn-panel">(() => {
 // @ts-check
