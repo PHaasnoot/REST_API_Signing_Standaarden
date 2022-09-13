@@ -38,7 +38,7 @@ dfn{cursor:pointer}
   
   
   
-<title>Titel</title>
+<title>Vergelijking REST API Signing Standaarden</title>
   
   
 <link rel="shortcut icon" type="image/x-icon" href="https://publicatie.centrumvoorstandaarden.nl/respec/style/logos/logius.ico">
@@ -115,7 +115,7 @@ ul.index code{color:inherit}
 #index-defined-here .print-only{display:initial}
 }
 </style>
-<meta name="description" content="Tekst">
+<meta name="description" content="In dit document worden de volgende standaarden beschreven en met elkaar vergeleken:">
 <style>
 .hljs{display:block;overflow-x:auto;padding:.5em;color:#383a42;background:#fafafa}
 .hljs-comment,.hljs-quote{color:#717277;font-style:italic}
@@ -146,24 +146,34 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   "publishVersion": "0.0.1",
   "editors": [
     {
-      "name": "Logius Standaarden",
+      "name": "Carmen Visinescu",
+      "company": "Kadaster",
+      "companyURL": "https://kadaster.nl"
+    },
+    {
+      "name": "Peter Haasnoot",
       "company": "Logius",
-      "companyURL": "https://github.com/Logius-standaarden"
+      "companyURL": "https://logius.nl"
     }
   ],
   "authors": [
     {
-      "name": "Logius Standaarden",
+      "name": "Carmen Visinescu",
+      "company": "Kadaster",
+      "companyURL": "https://kadaster.nl"
+    },
+    {
+      "name": "Peter Haasnoot",
       "company": "Logius",
-      "companyURL": "https://github.com/Logius-standaarden"
+      "companyURL": "https://logius.nl"
     }
   ],
-  "github": "https://github.com/Logius-standaarden/API-Design-Rules",
+  "github": "https://github.com/Logius-standaarden/REST_API_Signing_Standaarden",
   "addSectionLinks": true,
   "nl_addReleaseTagTitle": true,
-  "nl_organisationName": "Logius",
+  "nl_organisationName": "KPAPI",
   "nl_organisationStylesURL": "https://publicatie.centrumvoorstandaarden.nl/respec/style/",
-  "nl_organisationPrefix": "LS-",
+  "nl_organisationPrefix": "XS-",
   "nl_markdownEmbedImageInFigure": true,
   "nl_organisationPublishURL": "https://publicatie.centrumvoorstandaarden.nl/",
   "nl_logo": {
@@ -188,45 +198,49 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   "publishISODate": "2022-06-24T00:00:00.000Z",
   "generatedSubtitle": "Werkversie 13 september 2022"
 }</script>
-<link rel="stylesheet" href="https://publicatie.centrumvoorstandaarden.nl/respec/style/LS-WV.css"></head>
+<link rel="stylesheet" href="https://publicatie.centrumvoorstandaarden.nl/respec/style/XS-WV.css"></head>
 
 <body class="h-entry toc-inline"><div class="head">
     <a class="logo" href="https://www.logius.nl/standaarden"><img alt="Logius" height="77" id="Logius" src="https://publicatie.centrumvoorstandaarden.nl/respec/style/logos/figure-logius.svg" width="44">
-  </a> <h1 id="title" class="title">Titel</h1>
+  </a> <h1 id="title" class="title">Vergelijking REST API Signing Standaarden</h1>
     
     <h2>
-      Logius Handreiking<br>
+      KPAPI Handreiking<br>
       Werkversie
       <time class="dt-published" datetime="2022-06-24">13 september 2022</time>
     </h2>
     <dl>
       <dt>Deze versie:</dt><dd class="status">
-              <a class="u-url status" href="https://logius-standaarden.github.io/API-Design-Rules/">https://logius-standaarden.github.io/API-Design-Rules/</a>
+              <a class="u-url status" href="https://logius-standaarden.github.io/REST_API_Signing_Standaarden/">https://logius-standaarden.github.io/REST_API_Signing_Standaarden/</a>
             </dd><dt>Laatst gepubliceerde versie:</dt><dd>
               <a href="https://publicatie.centrumvoorstandaarden.nl/dk/template/">https://publicatie.centrumvoorstandaarden.nl/dk/template/</a>
             </dd>
-      <dt>Laatste werkversie:</dt><dd><a href="https://logius-standaarden.github.io/API-Design-Rules/">https://logius-standaarden.github.io/API-Design-Rules/</a></dd>
+      <dt>Laatste werkversie:</dt><dd><a href="https://logius-standaarden.github.io/REST_API_Signing_Standaarden/">https://logius-standaarden.github.io/REST_API_Signing_Standaarden/</a></dd>
       
       
       
       
       
-      <dt>Redacteur:</dt>
+      <dt>Redacteurs:</dt>
       <dd class="editor p-author h-card vcard">
-    <span class="p-name fn">Logius Standaarden</span> (<a class="p-org org h-org" href="https://github.com/Logius-standaarden">Logius</a>)
+    <span class="p-name fn">Carmen Visinescu</span> (<a class="p-org org h-org" href="https://kadaster.nl">Kadaster</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Peter Haasnoot</span> (<a class="p-org org h-org" href="https://logius.nl">Logius</a>)
   </dd>
       
-      <dt>Auteur:</dt><dd class="editor p-author h-card vcard">
-    <span class="p-name fn">Logius Standaarden</span> (<a class="p-org org h-org" href="https://github.com/Logius-standaarden">Logius</a>)
+      <dt>Auteurs:</dt><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Carmen Visinescu</span> (<a class="p-org org h-org" href="https://kadaster.nl">Kadaster</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Peter Haasnoot</span> (<a class="p-org org h-org" href="https://logius.nl">Logius</a>)
   </dd>
       <dt>Doe mee:</dt><dd>
-    <a href="https://github.com/Logius-standaarden/API-Design-Rules/">GitHub Logius-standaarden/API-Design-Rules</a>
+    <a href="https://github.com/Logius-standaarden/REST_API_Signing_Standaarden/">GitHub Logius-standaarden/REST_API_Signing_Standaarden</a>
   </dd><dd>
-    <a href="https://github.com/Logius-standaarden/API-Design-Rules/issues/">Dien een melding in</a>
+    <a href="https://github.com/Logius-standaarden/REST_API_Signing_Standaarden/issues/">Dien een melding in</a>
   </dd><dd>
-    <a href="https://github.com/Logius-standaarden/API-Design-Rules/commits/">Revisiehistorie</a>
+    <a href="https://github.com/Logius-standaarden/REST_API_Signing_Standaarden/commits/">Revisiehistorie</a>
   </dd><dd>
-    <a href="https://github.com/Logius-standaarden/API-Design-Rules/pulls/">Pull requests</a>
+    <a href="https://github.com/Logius-standaarden/REST_API_Signing_Standaarden/pulls/">Pull requests</a>
   </dd>
     </dl>
     
@@ -238,9 +252,13 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </p>
     <hr title="Separator for header">
   </div>
-  <section id="abstract" class="introductory"><h2>Samenvatting</h2><p>Tekst</p>
+  <section id="abstract" class="introductory"><h2>Samenvatting</h2><p>In dit document worden de volgende standaarden beschreven en met elkaar vergeleken:</p>
+<ul>
+<li>JADES</li>
+<li>httpbis-message-signatures</li>
+</ul>
 </section>
-  <section id="sotd" class="introductory"><h2>Status van dit document</h2>Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen door het Technisch Overleg goedgekeurde consultatieversie.<p></p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#niet-normatieve-deel"><bdi class="secno">1. </bdi>Niet-normatieve deel</a></li><li class="tocline"><a class="tocxref" href="#meer-inhoud"><bdi class="secno">2. </bdi>Meer inhoud</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#afbeeldingen"><bdi class="secno">2.1 </bdi>Afbeeldingen</a></li><li class="tocline"><a class="tocxref" href="#referenties"><bdi class="secno">2.2 </bdi>Referenties</a></li><li class="tocline"><a class="tocxref" href="#optioneel"><bdi class="secno">2.3 </bdi>Optioneel</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">3. </bdi>Conformiteit</a></li><li class="tocline"><a class="tocxref" href="#tof"><bdi class="secno">4. </bdi>Lijst met figuren</a></li><li class="tocline"><a class="tocxref" href="#index"><bdi class="secno">A. </bdi>Index</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#index-defined-here"><bdi class="secno">A.1 </bdi>Begrippen gedefinieerd door deze specificatie</a></li><li class="tocline"><a class="tocxref" href="#index-defined-elsewhere"><bdi class="secno">A.2 </bdi>Begrippen gedefinieerd door verwijzing</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">B. </bdi>Referenties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normatieve-referenties"><bdi class="secno">B.1 </bdi>Normatieve referenties</a></li></ol></li></ol></nav>
+  <section id="sotd" class="introductory"><h2>Status van dit document</h2>Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen door de werkgroep goedgekeurde consultatieversie.<p></p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#niet-normatieve-deel"><bdi class="secno">1. </bdi>Niet-normatieve deel</a></li><li class="tocline"><a class="tocxref" href="#meer-inhoud"><bdi class="secno">2. </bdi>Meer inhoud</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#afbeeldingen"><bdi class="secno">2.1 </bdi>Afbeeldingen</a></li><li class="tocline"><a class="tocxref" href="#referenties"><bdi class="secno">2.2 </bdi>Referenties</a></li><li class="tocline"><a class="tocxref" href="#optioneel"><bdi class="secno">2.3 </bdi>Optioneel</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">3. </bdi>Conformiteit</a></li><li class="tocline"><a class="tocxref" href="#tof"><bdi class="secno">4. </bdi>Lijst met figuren</a></li><li class="tocline"><a class="tocxref" href="#index"><bdi class="secno">A. </bdi>Index</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#index-defined-here"><bdi class="secno">A.1 </bdi>Begrippen gedefinieerd door deze specificatie</a></li><li class="tocline"><a class="tocxref" href="#index-defined-elsewhere"><bdi class="secno">A.2 </bdi>Begrippen gedefinieerd door verwijzing</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">B. </bdi>Referenties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normatieve-referenties"><bdi class="secno">B.1 </bdi>Normatieve referenties</a></li></ol></li></ol></nav>
   <section class="informative" id="niet-normatieve-deel"><div class="header-wrapper"><h2 id="x1-niet-normatieve-deel"><bdi class="secno">1. </bdi>Niet-normatieve deel</h2><a class="self-link" href="#niet-normatieve-deel" aria-label="Permalink for Section 1."></a></div><p><em>Dit onderdeel is niet normatief.</em></p>
 <p>Bijvoorbeeld een introductie.</p>
 <div class="note" role="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="3"><span>Noot</span><span class="issue-label">: index</span></div><p class="">
