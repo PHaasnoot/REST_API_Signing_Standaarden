@@ -14,20 +14,30 @@ var respecConfig =
   editors:
     [
       {
-        name: "Logius Standaarden",
+        name: "Carmen Visinescu",
+        company: "Kadaster",
+        companyURL: "https://kadaster.nl",
+      },
+      {
+        name: "Peter Haasnoot",
         company: "Logius",
-        companyURL: "https://github.com/Logius-standaarden",
+        companyURL: "https://logius.nl",
       }
     ],
   authors:
     [
       {
-        name: "Logius Standaarden",
+        name: "Carmen Visinescu",
+        company: "Kadaster",
+        companyURL: "https://kadaster.nl",
+      },
+      {
+        name: "Peter Haasnoot",
         company: "Logius",
-        companyURL: "https://github.com/Logius-standaarden",
+        companyURL: "https://logius.nl",
       }
     ],
-  github: "https://github.com/Logius-standaarden/API-Design-Rules",
+  github: "https://github.com/Logius-standaarden/REST_API_Signing_Standaarden",
   
   
  // Controls if linked "§" section markers are added to a document
@@ -39,7 +49,7 @@ var respecConfig =
 
     // nl_organisationName is used for some company specific values in the header (and Sotd)
   // currently supported: Logius and Geonovum (default)  
-  nl_organisationName: "Logius",
+  nl_organisationName: "KPAPI",
   
   // this url points to the folder where organsation specific css files are stored
   // defaults to https://tools.geostandaarden.nl/respec/style/ if not set
@@ -47,7 +57,7 @@ var respecConfig =
 
   // prefix for the names of company specific css, svg and ico prefixes
   // defaults to "GN-"  
-  nl_organisationPrefix: "LS-",
+  nl_organisationPrefix: "XS-",
 
   // if nl_markdownEmbedImageInFigure is set to true images in markdown generated content will be surrounded with <figures> element
   // so that figures can be linked are be a part of table of figures
