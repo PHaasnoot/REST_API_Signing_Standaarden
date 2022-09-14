@@ -85,6 +85,14 @@ var respecConfig =
       title: "Semantic Versioning 2.0.0",
       authors: ["T. Preston-Werner"],
       date: "June 2013"
+    },
+    "JAdES": {
+      href: "https://www.etsi.org/deliver/etsi_ts/119100_119199/11918201/01.01.01_60/ts_11918201v010101p.pdf",
+      title: "JAdES digital signatures",
+    },
+    "HTTP-MessageSig": {
+      href: "https://www.ietf.org/archive/id/draft-ietf-httpbis-message-signatures-11.html",
+      title: "HTTP Message Signatures",
     }
   },
 };
