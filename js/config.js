@@ -69,13 +69,13 @@ var respecConfig =
 
   // nl_logo refers to company logo
   // defaults to https://tools.geostandaarden.nl/respec/style/logos/Geonovum.svg
-  nl_logo: {
-    src: "xhttps://publicatie.centrumvoorstandaarden.nl/respec/style/logos/figure-logius.svg",
-    alt: "Logius",
-    id: "Logius",
-    height: 77,
-    width: 44,
-    url: "https://www.logius.nl/standaarden",
+  //nl_logo: {
+  //  src: "xhttps://publicatie.centrumvoorstandaarden.nl/respec/style/logos/figure-logius.svg",
+  //  alt: "Logius",
+  //  id: "Logius",
+  //  height: 77,
+  //  width: 44,
+  //  url: "https://www.logius.nl/standaarden",
   },
 
 
