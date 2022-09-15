@@ -37,7 +37,7 @@ var respecConfig =
         companyURL: "https://logius.nl",
       }
     ],
-  github: "https://github.com/Logius-standaarden/REST_API_Signing_Standaarden",
+  github: "https://github.com/PHaasnoot/REST_API_Signing_Standaarden",
   
   
  // Controls if linked "§" section markers are added to a document
@@ -70,7 +70,7 @@ var respecConfig =
   // nl_logo refers to company logo
   // defaults to https://tools.geostandaarden.nl/respec/style/logos/Geonovum.svg
   nl_logo: {
-    src: "https://publicatie.centrumvoorstandaarden.nl/respec/style/logos/figure-logius.svg",
+    src: "xhttps://publicatie.centrumvoorstandaarden.nl/respec/style/logos/figure-logius.svg",
     alt: "Logius",
     id: "Logius",
     height: 77,
