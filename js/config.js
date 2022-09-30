@@ -70,7 +70,8 @@ var respecConfig =
   // nl_logo refers to company logo
   // defaults to https://tools.geostandaarden.nl/respec/style/logos/Geonovum.svg
    nl_logo: {
-    src: "xhttps://publicatie.centrumvoorstandaarden.nl/respec/style/logos/figure-logius.svg",
+   // src: "xhttps://publicatie.centrumvoorstandaarden.nl/respec/style/logos/figure-logius.svg",
+    src: "media/leeg.png", 
     alt: "KPAPI",
     id: "KPAPI",
     height: 77,
