@@ -57,7 +57,7 @@ var respecConfig =
 
   // prefix for the names of company specific css, svg and ico prefixes
   // defaults to "GN-"  
-  nl_organisationPrefix: "LS-",
+  nl_organisationPrefix: "XS-",
 
   // if nl_markdownEmbedImageInFigure is set to true images in markdown generated content will be surrounded with <figures> element
   // so that figures can be linked are be a part of table of figures
