@@ -92,7 +92,7 @@ var respecConfig =
       title: "JAdES digital signatures",
     },
     "HTTP-MessageSig": {
-      href: "https://www.ietf.org/archive/id/draft-ietf-httpbis-message-signatures-11.html",
+      href: "https://www.ietf.org/archive/id/draft-ietf-httpbis-message-signatures-13.html",
       title: "HTTP Message Signatures",
     }
   },
