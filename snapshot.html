@@ -181,7 +181,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     }
   },
   "publishISODate": "2022-06-24T00:00:00.000Z",
-  "generatedSubtitle": "Werkversie 29 november 2022"
+  "generatedSubtitle": "Werkversie 01 december 2022"
 }</script>
 <link rel="stylesheet" href="https://publicatie.centrumvoorstandaarden.nl/respec/style/X-WV.css"></head>
 
@@ -192,7 +192,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     <h2>
       KPAPI Handreiking<br>
       Werkversie
-      <time class="dt-published" datetime="2022-06-24">29 november 2022</time>
+      <time class="dt-published" datetime="2022-06-24">01 december 2022</time>
     </h2>
     <dl>
       <dt>Deze versie:</dt><dd class="status">
@@ -243,7 +243,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <li>HTTP Message Signatures (httpbis-message-signatures)  [<cite><a class="bibref" data-link-type="biblio" href="#bib-http-messagesig" title="HTTP Message Signatures">HTTP-MessageSig</a></cite>]</li>
 </ul>
 </section>
-  <section id="sotd" class="introductory"><h2>Status van dit document</h2>Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen door de werkgroep goedgekeurde consultatieversie.<p></p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#vergelijking-jades-vs-httpbis-message-signatures"><bdi class="secno">1. </bdi>Vergelijking JAdES vs httpbis-message-signatures</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#inleiding"><bdi class="secno">1.1 </bdi>Inleiding</a></li><li class="tocline"><a class="tocxref" href="#digital-signature-algemeen"><bdi class="secno">1.2 </bdi>Digital Signature algemeen</a></li><li class="tocline"><a class="tocxref" href="#http-message-signatures"><bdi class="secno">1.3 </bdi>Http Message Signatures</a></li><li class="tocline"><a class="tocxref" href="#jades"><bdi class="secno">1.4 </bdi>JAdES</a></li><li class="tocline"><a class="tocxref" href="#vergelijking-en-use-cases"><bdi class="secno">1.5 </bdi>Vergelijking en Use Cases</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#http-message-signatures-httpbis-message-signatures-use-cases"><bdi class="secno">1.5.1 </bdi>HTTP Message Signatures (Httpbis-message-signatures) use-cases:</a></li><li class="tocline"><a class="tocxref" href="#jades-use-cases"><bdi class="secno">1.5.2 </bdi>JAdES use-cases:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#bijlage-a-httpbis-message-signatures"><bdi class="secno">1.6 </bdi>BIJLAGE A : HTTPBIS-Message-Signatures</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#signing-components"><bdi class="secno">1.6.1 </bdi>Signing components</a></li></ol></li><li class="tocline"><a class="tocxref" href="#bijlage-b-jades"><bdi class="secno">1.7 </bdi>BIJLAGE B : JAdES</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">A. </bdi>Referenties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informatieve-referenties"><bdi class="secno">A.1 </bdi>Informatieve referenties</a></li></ol></li></ol></nav>
+  <section id="sotd" class="introductory"><h2>Status van dit document</h2>Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen door de werkgroep goedgekeurde consultatieversie.<p></p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#vergelijking-jades-vs-httpbis-message-signatures"><bdi class="secno">1. </bdi>Vergelijking JAdES vs httpbis-message-signatures</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#inleiding"><bdi class="secno">1.1 </bdi>Inleiding</a></li><li class="tocline"><a class="tocxref" href="#digital-signature-algemeen"><bdi class="secno">1.2 </bdi>Digital Signature algemeen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#http-message-signatures"><bdi class="secno">1.2.1 </bdi>Http Message Signatures</a></li><li class="tocline"><a class="tocxref" href="#jades"><bdi class="secno">1.2.2 </bdi>JAdES</a></li><li class="tocline"><a class="tocxref" href="#vergelijking-en-use-cases"><bdi class="secno">1.2.3 </bdi>Vergelijking en Use Cases</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#http-message-signatures-httpbis-message-signatures-use-cases"><bdi class="secno">1.2.3.1 </bdi>HTTP Message Signatures (Httpbis-message-signatures) use-cases:</a></li><li class="tocline"><a class="tocxref" href="#jades-use-cases"><bdi class="secno">1.2.3.2 </bdi>JAdES use-cases:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#bijlage-a-httpbis-message-signatures"><bdi class="secno">1.2.4 </bdi>BIJLAGE A : HTTPBIS-Message-Signatures</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#signing-components"><bdi class="secno">1.2.4.1 </bdi>Signing components</a></li></ol></li><li class="tocline"><a class="tocxref" href="#bijlage-b-jades"><bdi class="secno">1.2.5 </bdi>BIJLAGE B : JAdES</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">A. </bdi>Referenties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informatieve-referenties"><bdi class="secno">A.1 </bdi>Informatieve referenties</a></li></ol></li></ol></nav>
   <section class="informative" id="vergelijking-jades-vs-httpbis-message-signatures"><div class="header-wrapper"><h2 id="x1-vergelijking-jades-vs-httpbis-message-signatures"><bdi class="secno">1. </bdi>Vergelijking JAdES vs httpbis-message-signatures</h2><a class="self-link" href="#vergelijking-jades-vs-httpbis-message-signatures" aria-label="Permalink for Section 1."></a></div><p><em>Dit onderdeel is niet normatief.</em></p>
 <section id="inleiding"><div class="header-wrapper"><h3 id="x1-1-inleiding"><bdi class="secno">1.1 </bdi>Inleiding</h3><a class="self-link" href="#inleiding" aria-label="Permalink for Section 1.1"></a></div>
 <p>In deze handreiking wordt eerst ingegaan op de algemene aspecten van signing, daarna worden de signing standaarden JAdES en http-message-signatures in hoofdlijnen beschreven en wordt aangeven wat de voornaamste eigenschappen en functionele aspecten zijn van beide standaarden.</p>
@@ -273,7 +273,7 @@ Digitale handtekeningen zijn gebaseerd op asymmetrische (of openbare sleutel) cr
 </ul>
 <p>Een ‘signed’ attribuut is een object, toegevoegd in de "digitaal signature" structuur. Het is een binair deel van het berekenen van het  digitale signature veld.  </p>
 <p>Afhankelijk van het business/juridische-scenario worden bepaalde velden in het ’signed-attributen’  en/of unsigned attributen structuur wel/niet toegevoegd.  </p>
-</section><section id="http-message-signatures"><div class="header-wrapper"><h3 id="x1-3-http-message-signatures"><bdi class="secno">1.3 </bdi>Http Message Signatures</h3><a class="self-link" href="#http-message-signatures" aria-label="Permalink for Section 1.3"></a></div>
+<section id="http-message-signatures"><div class="header-wrapper"><h4 id="x1-2-1-http-message-signatures"><bdi class="secno">1.2.1 </bdi>Http Message Signatures</h4><a class="self-link" href="#http-message-signatures" aria-label="Permalink for Section 1.2.1"></a></div>
 <p>Op moment van schrijven is dit de laatste versie van de standaard: <em>draft-ietf-httpbis-message-signatures-15</em> [<cite><a class="bibref" data-link-type="biblio" href="#bib-http-messagesig" title="HTTP Message Signatures">HTTP-MessageSig</a></cite>].</p>
 <p>HTTP Message Signatures ondersteunt gebruiksscenario's waar het volledige HTTP-bericht mogelijk niet bekend is bij de ondertekenaar, en waar het bericht onderweg kan worden getransformeerd (bijvoorbeeld door tussenpersonen) voordat deze de ontvanger bereikt.
 De standaard beschrijft ook een middel voor de verzender van een ‘request’ om te verzoeken om een handtekening van de ontvanger toe te passen op de ‘response’ in een lopende HTTP-uitwisseling.</p>
@@ -297,7 +297,7 @@ De standaard beschrijft ook een middel voor de verzender van een ‘request’ o
 <li>Mogelijkheid om trailer headers te ondertekenen;</li>
 <li>TLS-Terminating Proxies: Een specifieke use-case voor de standaard is het omzetten van een via tweezijdig TLS ontvangen bericht naar het achterland van een API gateway; het ontvangen certificaat kan meegezonden worden voor verdere afhandeling, de gateway kan het zelf ondertekenen met het eigen certificaat om aan te geven dat de gateway het bericht (en certificaat) correct heeft ontvangen (en gevalideerd);</li>
 </ul>
-</section><section id="jades"><div class="header-wrapper"><h3 id="x1-4-jades"><bdi class="secno">1.4 </bdi>JAdES</h3><a class="self-link" href="#jades" aria-label="Permalink for Section 1.4"></a></div>
+</section><section id="jades"><div class="header-wrapper"><h4 id="x1-2-2-jades"><bdi class="secno">1.2.2 </bdi>JAdES</h4><a class="self-link" href="#jades" aria-label="Permalink for Section 1.2.2"></a></div>
 <p>ETSI heeft een standaard voor JWS ontwikkeld, naast de andere ETSI standaarden voor de  AdES digital signatures van het Regulation (EU) No 910/2014,  genoemd JAdES  (ETSI TS 119 182-1). JAdES ondersteunt veilige communicatie die voldoet aan de vereisten van de eIDAS-verordening van de Europese Unie (nr. 910/2014) voor geavanceerde elektronische handtekeningen en zegels en wettelijke vereisten voor diensten zoals open bankieren.</p>
 <p><em>“In samenwerking met Open Banking Europe heeft ETSI een oplossing ontwikkeld die voldoet aan de vereisten van Open Banking API's en tegelijkertijd de authenticiteit van financiële transacties garandeert.”</em></p>
 <p><em>TS 119 182-1 is op RFC 7515 gebaseerd. Er zijn nieuwe attributen, header-parameters toegevoegd en er worden ook 4 "baseline levels"  geïntroduceerd.</em></p>
@@ -317,8 +317,8 @@ De standaard beschrijft ook een middel voor de verzender van een ‘request’ o
 <li>JAdES-handtekeningen met de profielen  B-LT, B-LTA kunnen de digitale certificaat validiteit op de lange termijn garanderen. Deze profielen zijn geschikt voor de realisatie van de archiveringseisen.</li>
 <li>Handtekeningen kunnen zowel op HTTP-requests en ook op HTTP-responses worden toegepast.</li>
 </ul>
-</section><section id="vergelijking-en-use-cases"><div class="header-wrapper"><h3 id="x1-5-vergelijking-en-use-cases"><bdi class="secno">1.5 </bdi>Vergelijking en Use Cases</h3><a class="self-link" href="#vergelijking-en-use-cases" aria-label="Permalink for Section 1.5"></a></div>
-<section id="http-message-signatures-httpbis-message-signatures-use-cases"><div class="header-wrapper"><h4 id="x1-5-1-http-message-signatures-httpbis-message-signatures-use-cases"><bdi class="secno">1.5.1 </bdi>HTTP Message Signatures (Httpbis-message-signatures) use-cases:</h4><a class="self-link" href="#http-message-signatures-httpbis-message-signatures-use-cases" aria-label="Permalink for Section 1.5.1"></a></div>
+</section><section id="vergelijking-en-use-cases"><div class="header-wrapper"><h4 id="x1-2-3-vergelijking-en-use-cases"><bdi class="secno">1.2.3 </bdi>Vergelijking en Use Cases</h4><a class="self-link" href="#vergelijking-en-use-cases" aria-label="Permalink for Section 1.2.3"></a></div>
+<section id="http-message-signatures-httpbis-message-signatures-use-cases"><div class="header-wrapper"><h5 id="x1-2-3-1-http-message-signatures-httpbis-message-signatures-use-cases"><bdi class="secno">1.2.3.1 </bdi>HTTP Message Signatures (Httpbis-message-signatures) use-cases:</h5><a class="self-link" href="#http-message-signatures-httpbis-message-signatures-use-cases" aria-label="Permalink for Section 1.2.3.1"></a></div>
 <ul>
 <li><p>TLS-Terminating proxy use-case:
 De tweezijdig TLS ontvangen berichten via een API gateway kunnen middels de httpbis-message signature ondertekend worden met het eigen gateway certificaat. Dat is om aan te geven dat de gateway (en certificaat) het bericht correct , zonder transformaties heeft ontvangen (en gevalideerd);
@@ -333,7 +333,7 @@ End-to-end communicatiebeveiliging en berichtenintegriteit voor de berichten htt
 <li><p>Httpbis-message-signature introduceert een mechanisme van ’request-response signature binding’</p>
 </li>
 </ul>
-</section><section id="jades-use-cases"><div class="header-wrapper"><h4 id="x1-5-2-jades-use-cases"><bdi class="secno">1.5.2 </bdi>JAdES use-cases:</h4><a class="self-link" href="#jades-use-cases" aria-label="Permalink for Section 1.5.2"></a></div>
+</section><section id="jades-use-cases"><div class="header-wrapper"><h5 id="x1-2-3-2-jades-use-cases"><bdi class="secno">1.2.3.2 </bdi>JAdES use-cases:</h5><a class="self-link" href="#jades-use-cases" aria-label="Permalink for Section 1.2.3.2"></a></div>
 <ul>
 <li>De ondertekende berichten (payload) worden juridisch gebruikt als bewijs in de rechtbank (d.w.z. zijn "onweerlegbaar").</li>
 </ul>
@@ -350,7 +350,7 @@ JAdES–handtekening detached kan getransporteerd worden met behulp van een HTTP
 <li>Realisatie van de archiveringseisen van de ondertekende communicatie berichten tussen 2 systemen.</li>
 </ul>
 <p>Met de implementatie van de JAdES-B-LT en JAdES-B-LTA profielen kunnen de JAdES-handtekeningen oneindig worden verlengd t.b.v archiveringseisen </p>
-</section></section><section id="bijlage-a-httpbis-message-signatures"><div class="header-wrapper"><h3 id="x1-6-bijlage-a-httpbis-message-signatures"><bdi class="secno">1.6 </bdi>BIJLAGE A : HTTPBIS-Message-Signatures</h3><a class="self-link" href="#bijlage-a-httpbis-message-signatures" aria-label="Permalink for Section 1.6"></a></div>
+</section></section><section id="bijlage-a-httpbis-message-signatures"><div class="header-wrapper"><h4 id="x1-2-4-bijlage-a-httpbis-message-signatures"><bdi class="secno">1.2.4 </bdi>BIJLAGE A : HTTPBIS-Message-Signatures</h4><a class="self-link" href="#bijlage-a-httpbis-message-signatures" aria-label="Permalink for Section 1.2.4"></a></div>
 <p>Zie [<cite><a class="bibref" data-link-type="biblio" href="#bib-http-messagesig" title="HTTP Message Signatures">HTTP-MessageSig</a></cite>]</p>
 <p>Voorbeelden:</p>
 <p>This section provides non-normative examples that may be used as test cases to validate implementation correctness. These examples are based on the following HTTP messages:</p>
@@ -379,7 +379,7 @@ Content-Length: 23
 
 {"message": "good dog"}
 </code></pre>
-<section id="signing-components"><div class="header-wrapper"><h4 id="x1-6-1-signing-components"><bdi class="secno">1.6.1 </bdi>Signing components</h4><a class="self-link" href="#signing-components" aria-label="Permalink for Section 1.6.1"></a></div>
+<section id="signing-components"><div class="header-wrapper"><h5 id="x1-2-4-1-signing-components"><bdi class="secno">1.2.4.1 </bdi>Signing components</h5><a class="self-link" href="#signing-components" aria-label="Permalink for Section 1.2.4.1"></a></div>
 <p>This example covers additional components (the authority, the Content-Digest header field, and a single named query parameter) in test-request using the rsa-pss-sha512 algorithm.</p>
 <p>The corresponding signature base is:</p>
 <pre><code aria-busy="false" class="hljs">NOTE: '\' line wrapping per RFC 8792
@@ -405,7 +405,7 @@ Signature: sig-b22=:W2kxR52X0tXN9u7yjyPeWa0T3D0SVG8KkPo+lOWyb2TGdLz\
   VT2eB3qpF2d/Psy0p1heKhrkz9uvKeCoj+P5QjLMS4eirHDqpKqe9YmCaMsJAUYSU\
   M86qC8qO6vMQhTMegTkEe25DquVcTiOAEAw==:
 </code></pre>
-</section></section><section id="bijlage-b-jades"><div class="header-wrapper"><h3 id="x1-7-bijlage-b-jades"><bdi class="secno">1.7 </bdi>BIJLAGE B : JAdES</h3><a class="self-link" href="#bijlage-b-jades" aria-label="Permalink for Section 1.7"></a></div>
+</section></section><section id="bijlage-b-jades"><div class="header-wrapper"><h4 id="x1-2-5-bijlage-b-jades"><bdi class="secno">1.2.5 </bdi>BIJLAGE B : JAdES</h4><a class="self-link" href="#bijlage-b-jades" aria-label="Permalink for Section 1.2.5"></a></div>
 <ol>
 <li>JAdES-handtekening velden</li>
 </ol>
@@ -453,7 +453,7 @@ Met JAdES-handtekening is het niet mogelijk alleen een deel van het JSON payload
 <li>Het B-LT-level bevat in de handtekening de elementen van het profiel B-T plus het materiaal dat nodig is voor het valideren van de handtekening in het handtekeningdocument. Dit niveau is bedoeld om de beschikbaarheid van het validatiemateriaal op lange termijn te realiseren.</li>
 <li>Het B-LTA-level bevat in de handtekening de elementen van het profiel B-LT plus de  elektronische tijdstempels die de validatie van de handtekening lang na het genereren ervan mogelijk maken. Dit niveau is bedoeld om de beschikbaarheid en integriteit van het validatiemateriaal op lange termijn te realiseren.</li>
 </ul>
-</section></section>
+</section></section></section>
   
   
   
