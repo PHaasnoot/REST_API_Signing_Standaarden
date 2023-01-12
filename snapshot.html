@@ -181,7 +181,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     }
   },
   "publishISODate": "2022-06-24T00:00:00.000Z",
-  "generatedSubtitle": "Werkversie 29 november 2022"
+  "generatedSubtitle": "Werkversie 01 december 2022"
 }</script>
 <link rel="stylesheet" href="https://publicatie.centrumvoorstandaarden.nl/respec/style/X-WV.css"></head>
 
@@ -192,7 +192,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     <h2>
       KPAPI Handreiking<br>
       Werkversie
-      <time class="dt-published" datetime="2022-06-24">29 november 2022</time>
+      <time class="dt-published" datetime="2022-06-24">01 december 2022</time>
     </h2>
     <dl>
       <dt>Deze versie:</dt><dd class="status">
@@ -249,17 +249,18 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <p>In deze handreiking wordt eerst ingegaan op de algemene aspecten van signing, daarna worden de signing standaarden JAdES en http-message-signatures in hoofdlijnen beschreven en wordt aangeven wat de voornaamste eigenschappen en functionele aspecten zijn van beide standaarden.</p>
 </section><section id="digital-signature-algemeen"><div class="header-wrapper"><h3 id="x1-2-digital-signature-algemeen"><bdi class="secno">1.2 </bdi>Digital Signature algemeen</h3><a class="self-link" href="#digital-signature-algemeen" aria-label="Permalink for Section 1.2"></a></div>
 <p>Digitale handtekeningen zijn ontworpen om de integriteit van de inhoud en authenticatie van de oorsprong en onweerlegbaarheid van de oorsprong te bieden aan gegevensobjecten die door netwerken van hun oorsprong naar hun bestemming worden getransporteerd.
-Digitale handtekeningen zijn gebaseerd op asymmetrische (of openbare sleutel) cryptografie. Het digitaal ondertekenen van een gegevensobject bestaat uit twee stappen :</p>
+Digitale handtekeningen zijn gebaseerd op asymmetrische (of openbare sleutel) cryptografie. </p>
+<p>Het digitaal ondertekenen van een gegevensobject bestaat uit twee stappen :</p>
 <ol>
-<li>het berekenen van de samenvatting van de binaire representatie van het te ondertekenen data-object – de digest-data</li>
-<li>het resultaat van deze operatie versleutelen (encrypten) met de privésleutel van de ondertekenaar.
+<li>Berekenen van de samenvatting van de binaire representatie van het te ondertekenen data-object – de digest-data</li>
+<li>Resultaat van deze operatie versleutelen (encrypten) met de privésleutel van de ondertekenaar.
 (ETSI (European Standards Institute TR 119 001)  gebruikt het term  "digital signature value" voor het resultaat van de laatste stap)</li>
 </ol>
-<p>De proces-verificatie bevat de volgende stappen: </p>
+<p>Het verificatie proces bestaat uit de volgende stappen: </p>
 <ol>
 <li>Voorbereiden van de "to-be-signed-data" met de canonicalisatie- geaccepteerde transformaties en het berekenen van het digest-data (bv. met behulp van een hash algorithme) </li>
-<li>Decrypt de ondertekende digital signature waarde met de public-key   </li>
-<li>Vergelijk beide waarden van het oorspronkelijke bericht met het resultaat van stap 2. Als de waarden gelijk zijn, dan is de verificatie succesvol.</li>
+<li>Decrypten van de ondertekende digital signature waarde met de public-key   </li>
+<li>Vergelijken van beide waarden van het oorspronkelijke bericht met het resultaat van stap 2. Als de waarden gelijk zijn, dan is de verificatie succesvol.</li>
 </ol>
 <p>De digitale ondertekening maakt gebruik van een Public Key Infrastructure (welke verder gebruik maakt van entiteiten zoals certificaten, CRLs, OCSP antwoorden, time-stamp tokens (die bewijzen dat een bepaald data-object bestond op een bepaald moment), Trust services, zoals services uitgevers certificaten (CAs), services uitgevers time-stamp tokens, etc.</p>
 <p><strong>Alle standaard formaten bevatten de volgende componenten:</strong>  </p>
