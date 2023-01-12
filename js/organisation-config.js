@@ -3,7 +3,7 @@ var organisationConfig = {
   nl_organisationName: "KPAPI",
   nl_organisationStylesURL:
     "https://gitdocumentatie.logius.nl/publicatie/respec/style/",
-  nl_organisationPublishURL: "https://gitdocumentatie.logius.nl/publicatie/",
+  nl_organisationPublishURL: "https://geonovum.github.io/KP-APIs/publicaties/REST_API_Signing_Standaarden/",
   logos: [{
     src: "https://gitdocumentatie.logius.nl/publicatie/respec/style/logos/figure-logius.svg",
     alt: "Logius",

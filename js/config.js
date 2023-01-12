@@ -2,7 +2,7 @@ var respecConfig = {
   useLogo: false,
   useLabel: true,
   license: "cc0",
-  specStatus: "WV",
+  specStatus: "DEF",
   specType: "HR",
   pubDomain: "dk",
   shortName: "template",
