@@ -5,7 +5,7 @@ var respecConfig = {
   specStatus: "WV",
   specType: "HR",
   pubDomain: "",
-  shortName: "",
+  shortName: "dev",
   publishDate: "2022-06-24",
   publishVersion: "1.0.0",
   title: "Vergelijking REST API Signing Standaarden",
