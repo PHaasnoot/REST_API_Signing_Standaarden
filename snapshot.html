@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="nl"><head>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta content="text/html; charset=utf-8" http-equiv="content-type">
-<meta name="generator" content="ReSpec 32.1.10">
+<meta name="generator" content="ReSpec 32.6.0">
 <style>
 dfn{cursor:pointer}
 .dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;color:#000;box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);border-radius:2px}
@@ -25,10 +25,16 @@ dfn{cursor:pointer}
   
   
   
+  
+  
+  
+  
+<script>document.title = respecConfig.title</script>
 <title>Vergelijking REST API Signing Standaarden</title>
   
+<title>Default</title>
   
-<link rel="shortcut icon" type="image/x-icon" href="https://publicatie.centrumvoorstandaarden.nl/respec/style/logos/logius.ico">
+<link rel="shortcut icon" type="image/x-icon" href="https://gitdocumentatie.logius.nl/publicatie/respec/style/logos/logius.ico">
   
 
 <style id="respec-mainstyle">
@@ -50,8 +56,6 @@ a.bibref{text-decoration:none}
 }
 #references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}
 cite .bibref{font-style:normal}
-code{color:#c63501}
-th code{color:inherit}
 a[href].orcid{padding-left:4px;padding-right:4px}
 a[href].orcid>svg{margin-bottom:-2px}
 .toc a,.tof a{text-decoration:none}
@@ -91,6 +95,17 @@ dd{margin-left:0}
 .removeOnSave{display:none}
 }
 </style>
+<style>
+ul.index{columns:30ch;column-gap:1.5em}
+ul.index li{list-style:inherit}
+ul.index li span{color:inherit;cursor:pointer;white-space:normal}
+#index-defined-here ul.index li{font-size:.9rem}
+ul.index code{color:inherit}
+#index-defined-here .print-only{display:none}
+@media print{
+#index-defined-here .print-only{display:initial}
+}
+</style>
 <meta name="description" content="In dit document worden de volgende standaarden beschreven en met elkaar vergeleken:">
 <style>
 .hljs{display:block;overflow-x:auto;padding:.5em;color:#383a42;background:#fafafa}
@@ -107,19 +122,196 @@ dd{margin-left:0}
 .hljs-link{text-decoration:underline}
 </style>
 <style>
-var{position:relative;cursor:pointer}
-var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}
-var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}
-var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}
-var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
+.sidelabel{position:fixed;-webkit-transform-origin:top right;right:100%;top:0;-webkit-transform:rotate(-90deg);padding:4px 50px 4px 10px;color:#fff;white-space:nowrap;z-index:1}
+</style>
+<script type="text/javascript">
+   /* Any custom mermaid.js scripts will go here. */
+  </script>
+<style>
+
+  /* Any custom mermaid.js scripts will go here. */
+  }
 </style>
 <script id="initialUserConfig" type="application/json">{
+  "nl_organisationName": "KPAPI",
+  "nl_organisationStylesURL": "https://gitdocumentatie.logius.nl/publicatie/respec/style/",
+  "nl_organisationPublishURL": "https://gitdocumentatie.logius.nl/publicatie/",
+  "logos": [
+    {
+      "src": "https://gitdocumentatie.logius.nl/publicatie/respec/style/logos/figure-logius.svg",
+      "alt": "Logius",
+      "id": "Logius",
+      "height": 77,
+      "width": 44,
+      "url": "https://www.logius.nl/standaarden"
+    }
+  ],
+  "addSectionLinks": true,
+  "postProcess": [
+    null
+  ],
+  "localizationStrings": {
+    "en": {
+      "wv": "Draft",
+      "cv": "Recommendation",
+      "vv": "Proposed recommendation",
+      "def": "Definitive version",
+      "basis": "Document",
+      "eo": "Outdated version",
+      "tg": "Rescinded version",
+      "no": "Norm",
+      "st": "Standard",
+      "im": "Information model",
+      "pr": "Guideline",
+      "hr": "Guide",
+      "wa": "Proposed recommendation",
+      "al": "General",
+      "bd": "Governance documentation",
+      "bp": "Best practice"
+    },
+    "nl": {
+      "wv": "Werkversie",
+      "cv": "Consultatieversie",
+      "vv": "Versie ter vaststelling",
+      "def": "Vastgestelde versie",
+      "basis": "Document",
+      "eo": "Verouderde versie",
+      "tg": "Teruggetrokken versie",
+      "no": "Norm",
+      "st": "Standaard",
+      "im": "Informatiemodel",
+      "pr": "Praktijkrichtlijn",
+      "hr": "Handreiking",
+      "wa": "Werkafspraak",
+      "al": "Algemeen",
+      "bd": "Beheerdocumentatie",
+      "bp": "Best practice"
+    }
+  },
+  "specTypeText": {
+    "en": {
+      "no": "Norm",
+      "st": "Standard",
+      "im": "Information model",
+      "pr": "Guideline",
+      "hr": "Guide",
+      "wa": "Proposed recommendation",
+      "al": "General",
+      "bd": "Governance documentation",
+      "bp": "Best practice"
+    },
+    "nl": {
+      "no": "Norm",
+      "st": "Standaard",
+      "im": "Informatiemodel",
+      "pr": "Praktijkrichtlijn",
+      "hr": "Handreiking",
+      "wa": "Werkafspraak",
+      "al": "Algemeen",
+      "bd": "Beheerdocumentatie",
+      "bp": "Best practice"
+    }
+  },
+  "specStatusText": {
+    "en": {
+      "wv": "Draft",
+      "cv": "Recommendation",
+      "vv": "Proposed recommendation",
+      "def": "Definitive version",
+      "basis": "Document",
+      "eo": "Outdated version",
+      "tg": "Rescinded version"
+    },
+    "nl": {
+      "wv": "Werkversie",
+      "cv": "Consultatieversie",
+      "vv": "Versie ter vaststelling",
+      "def": "Vastgestelde versie",
+      "basis": "Document",
+      "eo": "Verouderde versie",
+      "tg": "Teruggetrokken versie"
+    }
+  },
+  "sotdText": {
+    "nl": {
+      "sotd": "Status van dit document",
+      "def": "Dit is de definitieve versie van dit document. Wijzigingen naar aanleiding van consultaties zijn doorgevoerd.",
+      "wv": "Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen door het TO goedgekeurde consultatieversie.",
+      "cv": "Dit is een door het TO goedgekeurde consultatieversie. Commentaar over dit document kan gestuurd worden naar ",
+      "vv": "Dit is een definitief concept van de nieuwe versie van dit document. Wijzigingen naar aanleiding van consultaties zijn doorgevoerd.",
+      "basis": "Dit is een document zonder officiële status."
+    },
+    "en": {
+      "sotd": "Status of This Document",
+      "def": "This is the definitive version of this document. Edits resulting from consultations have been applied.",
+      "wv": "This is a draft that could be altered, removed or replaced by other documents. It is not a recommendation approved by TO.",
+      "cv": "This is a proposed recommendation approved by TO. Comments regarding this document may be sent to ",
+      "vv": "This is the definitive concept of this document. Edits resulting from consultations have been applied.",
+      "basis": "This document has no official standing."
+    }
+  },
+  "labelColor": {
+    "def": "#014273",
+    "wv": "#014273"
+  },
+  "licenses": {
+    "cc0": {
+      "name": "Creative Commons 0 Public Domain Dedication",
+      "short": "CC0",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "image": "https://tools.geostandaarden.nl/respec/style/logos/CC-Licentie.svg"
+    },
+    "cc-by": {
+      "name": "Creative Commons Attribution 4.0 International Public License",
+      "short": "CC-BY",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "image": "https://tools.geostandaarden.nl/respec/style/logos/cc-by.svg"
+    },
+    "cc-by-nd": {
+      "name": "Creative Commons Naamsvermelding-GeenAfgeleideWerken 4.0 Internationaal",
+      "short": "CC-BY-ND",
+      "url": "https://creativecommons.org/licenses/by-nd/4.0/legalcode.nl",
+      "image": "https://tools.geostandaarden.nl/respec/style/logos/cc-by-nd.svg"
+    }
+  },
+  "localBiblio": {
+    "SemVer": {
+      "href": "https://semver.org",
+      "title": "Semantic Versioning 2.0.0",
+      "authors": [
+        "T. Preston-Werner"
+      ],
+      "date": "June 2013"
+    },
+    "JAdES": {
+      "href": "https://www.etsi.org/deliver/etsi_ts/119100_119199/11918201/01.01.01_60/ts_11918201v010101p.pdf",
+      "title": "JAdES digital signatures",
+      "id": "jades"
+    },
+    "HTTP-MessageSig": {
+      "href": "https://www.ietf.org/archive/id/draft-ietf-httpbis-message-signatures-15.html",
+      "title": "HTTP Message Signatures",
+      "id": "http-messagesig"
+    },
+    "ISA2 IPS REST API Profile": {
+      "href": "https://ec.europa.eu/digital-building-blocks/wikis/download/attachments/323290750/%28ISA2%29.%28eDelivery%29.%28Piloting a REST API extension of CEF eDelivery%29.%28ISA%C2%B2 IPS REST API Profile%29.%28v1.0%29.pdf?api=v2",
+      "title": "ISA2 IPS REST API Profile",
+      "id": "isa2 ips rest api profile"
+    }
+  },
+  "useLogo": false,
+  "useLabel": true,
+  "license": "cc0",
   "specStatus": "WV",
   "specType": "HR",
   "pubDomain": "dk",
   "shortName": "template",
   "publishDate": "2022-06-24",
-  "publishVersion": "0.0.1",
+  "publishVersion": "1.0.0",
+  "title": "Vergelijking REST API Signing Standaarden",
+  "content": {
+    "ch01": "informative"
+  },
   "editors": [
     {
       "name": "Carmen Visinescu",
@@ -144,61 +336,23 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "companyURL": "https://logius.nl"
     }
   ],
-  "github": "https://github.com/PHaasnoot/REST_API_Signing_Standaarden",
-  "addSectionLinks": true,
-  "nl_addReleaseTagTitle": true,
-  "nl_organisationName": "KPAPI",
-  "nl_organisationStylesURL": "https://publicatie.centrumvoorstandaarden.nl/respec/style/",
-  "nl_organisationPrefix": "X-",
-  "nl_markdownEmbedImageInFigure": true,
-  "nl_organisationPublishURL": "https://publicatie.centrumvoorstandaarden.nl/",
-  "nl_logo": {
-    "src": "media/leeg.png",
-    "alt": "KPAPI",
-    "id": "KPAPI",
-    "height": 77,
-    "width": 44,
-    "url": ""
-  },
-  "localBiblio": {
-    "SemVer": {
-      "href": "https://semver.org",
-      "title": "Semantic Versioning 2.0.0",
-      "authors": [
-        "T. Preston-Werner"
-      ],
-      "date": "June 2013"
-    },
-    "JAdES": {
-      "href": "https://www.etsi.org/deliver/etsi_ts/119100_119199/11918201/01.01.01_60/ts_11918201v010101p.pdf",
-      "title": "JAdES digital signatures",
-      "id": "jades"
-    },
-    "HTTP-MessageSig": {
-      "href": "https://www.ietf.org/archive/id/draft-ietf-httpbis-message-signatures-15.html",
-      "title": "HTTP Message Signatures",
-      "id": "http-messagesig"
-    }
-  },
-  "publishISODate": "2022-06-24T00:00:00.000Z",
-  "generatedSubtitle": "Werkversie 01 december 2022"
+  "github": "https://github.com/PHaasnoot/REST_API_Signing_Standaarden"
 }</script>
-<link rel="stylesheet" href="https://publicatie.centrumvoorstandaarden.nl/respec/style/X-WV.css"></head>
+<link rel="stylesheet" href="https://gitdocumentatie.logius.nl/publicatie/respec/style/base.css"></head>
 
-<body class="h-entry informative toc-inline"><div class="head">
-    <a class="logo"><img alt="KPAPI" height="77" id="KPAPI" src="media/leeg.png" width="44">
-  </a> <h1 id="title" class="title">Vergelijking REST API Signing Standaarden</h1>
+<body class="h-entry"><div class="head">
+     <h1 id="title" class="title">Vergelijking REST API Signing Standaarden</h1>
     
     <h2>
       KPAPI Handreiking<br>
       Werkversie
-      <time class="dt-published" datetime="2022-06-24">01 december 2022</time>
+      <time class="dt-published" datetime="2022-06-24">12 januari 2023</time>
     </h2>
     <dl>
       <dt>Deze versie:</dt><dd class="status">
               <a class="u-url status" href="https://phaasnoot.github.io/REST_API_Signing_Standaarden/">https://phaasnoot.github.io/REST_API_Signing_Standaarden/</a>
             </dd><dt>Laatst gepubliceerde versie:</dt><dd>
-              <a href="https://publicatie.centrumvoorstandaarden.nl/dk/template/">https://publicatie.centrumvoorstandaarden.nl/dk/template/</a>
+              <a href="https://gitdocumentatie.logius.nl/publicatie/dk/template/">https://gitdocumentatie.logius.nl/publicatie/dk/template/</a>
             </dd>
       <dt>Laatste werkversie:</dt><dd><a href="https://phaasnoot.github.io/REST_API_Signing_Standaarden/">https://phaasnoot.github.io/REST_API_Signing_Standaarden/</a></dd>
       
@@ -231,9 +385,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     
     
     
-    <p class="copyright" lang="en">
-          This document is licensed under a
-          <a rel="license" href="https://creativecommons.org/licenses/by/4.0/" class="subfoot">Creative Commons Attribution 4.0 License</a>.
+    <p class="copyright">
+          Dit document valt onder de volgende licentie: 
+          <a rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/" class="subfoot">Creative Commons 0 Public Domain Dedication</a>.
         </p>
     <hr title="Separator for header">
   </div>
@@ -243,10 +397,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <li>HTTP Message Signatures (httpbis-message-signatures)  [<cite><a class="bibref" data-link-type="biblio" href="#bib-http-messagesig" title="HTTP Message Signatures">HTTP-MessageSig</a></cite>]</li>
 </ul>
 </section>
-  <section id="sotd" class="introductory"><h2>Status van dit document</h2>Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen door de werkgroep goedgekeurde consultatieversie.<p></p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#vergelijking-jades-vs-httpbis-message-signatures"><bdi class="secno">1. </bdi>Vergelijking JAdES vs httpbis-message-signatures</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#inleiding"><bdi class="secno">1.1 </bdi>Inleiding</a></li><li class="tocline"><a class="tocxref" href="#digital-signature-algemeen"><bdi class="secno">1.2 </bdi>Digital Signature algemeen</a></li><li class="tocline"><a class="tocxref" href="#http-message-signatures"><bdi class="secno">1.3 </bdi>Http Message Signatures</a></li><li class="tocline"><a class="tocxref" href="#jades"><bdi class="secno">1.4 </bdi>JAdES</a></li><li class="tocline"><a class="tocxref" href="#vergelijking-en-use-cases"><bdi class="secno">1.5 </bdi>Vergelijking en Use Cases</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#http-message-signatures-httpbis-message-signatures-use-cases"><bdi class="secno">1.5.1 </bdi>HTTP Message Signatures (Httpbis-message-signatures) use-cases:</a></li><li class="tocline"><a class="tocxref" href="#jades-use-cases"><bdi class="secno">1.5.2 </bdi>JAdES use-cases:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#bijlage-a-httpbis-message-signatures"><bdi class="secno">1.6 </bdi>BIJLAGE A : HTTPBIS-Message-Signatures</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#signing-components"><bdi class="secno">1.6.1 </bdi>Signing components</a></li></ol></li><li class="tocline"><a class="tocxref" href="#bijlage-b-jades"><bdi class="secno">1.7 </bdi>BIJLAGE B : JAdES</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">A. </bdi>Referenties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informatieve-referenties"><bdi class="secno">A.1 </bdi>Informatieve referenties</a></li></ol></li></ol></nav>
-  <section class="informative" id="vergelijking-jades-vs-httpbis-message-signatures"><div class="header-wrapper"><h2 id="x1-vergelijking-jades-vs-httpbis-message-signatures"><bdi class="secno">1. </bdi>Vergelijking JAdES vs httpbis-message-signatures</h2><a class="self-link" href="#vergelijking-jades-vs-httpbis-message-signatures" aria-label="Permalink for Section 1."></a></div><p><em>Dit onderdeel is niet normatief.</em></p>
+  <section id="sotd" class="introductory"><h2>Status van dit document</h2><p>Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen door het TO goedgekeurde consultatieversie.</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#vergelijking-jades-vs-httpbis-message-signatures"><bdi class="secno">1. </bdi>Vergelijking JAdES vs httpbis-message-signatures</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#inleiding"><bdi class="secno">1.1 </bdi>Inleiding</a></li><li class="tocline"><a class="tocxref" href="#digital-signature-algemeen"><bdi class="secno">1.2 </bdi>Digital Signature algemeen</a></li><li class="tocline"><a class="tocxref" href="#http-message-signatures"><bdi class="secno">1.3 </bdi>Http Message Signatures</a></li><li class="tocline"><a class="tocxref" href="#jades"><bdi class="secno">1.4 </bdi>JAdES</a></li><li class="tocline"><a class="tocxref" href="#vergelijking-en-use-cases"><bdi class="secno">1.5 </bdi>Vergelijking en Use Cases</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#http-message-signatures-httpbis-message-signatures-use-cases"><bdi class="secno">1.5.1 </bdi>HTTP Message Signatures (Httpbis-message-signatures) use-cases:</a></li><li class="tocline"><a class="tocxref" href="#jades-use-cases"><bdi class="secno">1.5.2 </bdi>JAdES use-cases:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#bijlage-a-httpbis-message-signatures"><bdi class="secno">1.6 </bdi>BIJLAGE A : HTTPBIS-Message-Signatures</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#signing-components"><bdi class="secno">1.6.1 </bdi>Signing components</a></li></ol></li><li class="tocline"><a class="tocxref" href="#bijlage-b-jades"><bdi class="secno">1.7 </bdi>BIJLAGE B : JAdES</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">2. </bdi>Conformiteit</a></li><li class="tocline"><a class="tocxref" href="#index"><bdi class="secno">A. </bdi>Index</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#index-defined-here"><bdi class="secno">A.1 </bdi>Begrippen gedefinieerd door deze specificatie</a></li><li class="tocline"><a class="tocxref" href="#index-defined-elsewhere"><bdi class="secno">A.2 </bdi>Begrippen gedefinieerd door verwijzing</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">B. </bdi>Referenties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informatieve-referenties"><bdi class="secno">B.1 </bdi>Informatieve referenties</a></li></ol></li></ol></nav><section class="informative" id="vergelijking-jades-vs-httpbis-message-signatures"><div class="header-wrapper"><h2 id="x1-vergelijking-jades-vs-httpbis-message-signatures"><bdi class="secno">1. </bdi>Vergelijking JAdES vs httpbis-message-signatures</h2><a class="self-link" href="#vergelijking-jades-vs-httpbis-message-signatures" aria-label="Permalink for Section 1."></a></div><p><em>Dit onderdeel is niet normatief.</em></p>
 <section id="inleiding"><div class="header-wrapper"><h3 id="x1-1-inleiding"><bdi class="secno">1.1 </bdi>Inleiding</h3><a class="self-link" href="#inleiding" aria-label="Permalink for Section 1.1"></a></div>
-<p>In deze handreiking wordt eerst ingegaan op de algemene aspecten van signing, daarna worden de signing standaarden JAdES en http-message-signatures in hoofdlijnen beschreven en wordt aangeven wat de voornaamste eigenschappen en functionele aspecten zijn van beide standaarden.</p>
+<p>In deze handreiking wordt eerst ingegaan op de algemene aspecten van signing, daarna worden de signing standaarden ETSI-JAdES en http-message-signatures in hoofdlijnen beschreven en wordt aangeven wat de voornaamste eigenschappen en functionele aspecten zijn van beide standaarden.</p>
 </section><section id="digital-signature-algemeen"><div class="header-wrapper"><h3 id="x1-2-digital-signature-algemeen"><bdi class="secno">1.2 </bdi>Digital Signature algemeen</h3><a class="self-link" href="#digital-signature-algemeen" aria-label="Permalink for Section 1.2"></a></div>
 <p>Digitale handtekeningen zijn ontworpen om de integriteit van de inhoud en authenticatie van de oorsprong en onweerlegbaarheid van de oorsprong te bieden aan gegevensobjecten die door netwerken van hun oorsprong naar hun bestemming worden getransporteerd.
 Digitale handtekeningen zijn gebaseerd op asymmetrische (of openbare sleutel) cryptografie. </p>
@@ -260,7 +413,7 @@ Digitale handtekeningen zijn gebaseerd op asymmetrische (of openbare sleutel) cr
 <ol>
 <li>Voorbereiden van de "to-be-signed-data" met de canonicalisatie- geaccepteerde transformaties en het berekenen van het digest-data (bv. met behulp van een hash algorithme) </li>
 <li>Decrypten van de ondertekende digital signature waarde met de public-key   </li>
-<li>Vergelijken van beide waarden van het oorspronkelijke bericht met het resultaat van stap 2. Als de waarden gelijk zijn, dan is de verificatie succesvol.</li>
+<li>Vergelijken van beide waarden van het oorspronkelijke digest-data van het bericht met het resultaat van stap 2. Als de waarden gelijk zijn, dan is de verificatie succesvol.</li>
 </ol>
 <p>De digitale ondertekening maakt gebruik van een Public Key Infrastructure (welke verder gebruik maakt van entiteiten zoals certificaten, CRLs, OCSP antwoorden, time-stamp tokens (die bewijzen dat een bepaald data-object bestond op een bepaald moment), Trust services, zoals services uitgevers certificaten (CAs), services uitgevers time-stamp tokens, etc.</p>
 <p><strong>Alle standaard formaten bevatten de volgende componenten:</strong>  </p>
@@ -300,7 +453,7 @@ De standaard beschrijft ook een middel voor de verzender van een ‘request’ o
 </section><section id="jades"><div class="header-wrapper"><h3 id="x1-4-jades"><bdi class="secno">1.4 </bdi>JAdES</h3><a class="self-link" href="#jades" aria-label="Permalink for Section 1.4"></a></div>
 <p>ETSI heeft een standaard voor JWS ontwikkeld, naast de andere ETSI standaarden voor de  AdES digital signatures van het Regulation (EU) No 910/2014,  genoemd JAdES  (ETSI TS 119 182-1). JAdES ondersteunt veilige communicatie die voldoet aan de vereisten van de eIDAS-verordening van de Europese Unie (nr. 910/2014) voor geavanceerde elektronische handtekeningen en zegels en wettelijke vereisten voor diensten zoals open bankieren.</p>
 <p><em>“In samenwerking met Open Banking Europe heeft ETSI een oplossing ontwikkeld die voldoet aan de vereisten van Open Banking API's en tegelijkertijd de authenticiteit van financiële transacties garandeert.”</em></p>
-<p><em>TS 119 182-1 is op RFC 7515 gebaseerd. Er zijn nieuwe attributen, header-parameters toegevoegd en er worden ook 4 "baseline levels"  geïntroduceerd.</em></p>
+<p><em>ETSI TS 119 182-1 definieert JAdES  als  een uitbreiding van JSON WS/ RFC 7515. Er zijn nieuwe attributen, header-parameters toegevoegd en er worden ook 4 "baseline levels"  geïntroduceerd.</em> </p>
 <p>Het huidige profile (JSON signature) is gelijk met het basic JAdES-B-B level. Het maakt gebruik van JWS header parameters, zoals ook gedefinieerd in het JAdES profile.  </p>
 <p>ETSI TS 119 182-1 kan worden gebruikt voor elke transactie tussen een persoon en een bedrijf, tussen twee bedrijven, tussen een persoon en een overheidsinstantie, enz. die van toepassing is op elektronische communicatie. De technische kenmerken van de specificatie kunnen daarom worden toegepast op het gebruik van op PKI gebaseerde digitale handtekeningtechnologie.</p>
 <p>Ontwerp principes:</p>
@@ -335,21 +488,22 @@ End-to-end communicatiebeveiliging en berichtenintegriteit voor de berichten htt
 </ul>
 </section><section id="jades-use-cases"><div class="header-wrapper"><h4 id="x1-5-2-jades-use-cases"><bdi class="secno">1.5.2 </bdi>JAdES use-cases:</h4><a class="self-link" href="#jades-use-cases" aria-label="Permalink for Section 1.5.2"></a></div>
 <ul>
-<li>De ondertekende berichten (payload) worden juridisch gebruikt als bewijs in de rechtbank (d.w.z. zijn "onweerlegbaar").</li>
+<li>De ondertekende berichten (payload) worden juridisch gebruikt als bewijs in de rechtbank 5(d.w.z. zijn "onweerlegbaar").</li>
 </ul>
 <p>JAdES-handtekening ondersteunt de veilige communicatie die voldoet aan de vereisten van de eIDAS-verordening van de Europese Unie (nr. 910/2014) voor geavanceerde of gekwalificeerd elektronische handtekeningen en zegels en wettelijke vereisten. In dit scenario kunnen geavanceerde /gekwalificeerd ondertekening certificaten van de PKI-QTPS’s of QTSA’s (gekwalificeerd timestamps certificaten) gebruikt worden.</p>
-<p>JAdES-handtekening wordt gebruikt als standaard in de communicatie van de payment-services conform EU Payment Services Directive 2015/2366 [16] (PSD2).</p>
+<p>JAdES-handtekening wordt gebruikt als standaard in de communicatie van de payment-services conform EU Payment Services Directive 2015/2366 (PSD2).</p>
+<p>In een juridische context wordt de JAdES-handtekening verrijkt met verschillende velden in de handtekening bv: tijdstip ondertekening; commitment (reden) van de ondertekening; toevoegen van de counter-ondertekening;</p>
 <ul>
-<li>JAdES–handtekening kan gebruikt worden in de realisatie van een B2B betrouwbare veilige communicatie tussen 2 systemen op basis van de REST-API.</li>
+<li>Het profile JAdES–Detached met de HttpHeaders mechanisme wordt aanbevolen (zie het bron-document ISA2 IPS REST API Profile,paragraaf 5.2 [<cite><a class="bibref" data-link-type="biblio" href="#bib-isa2 ips rest api profile" title="ISA2 IPS REST API Profile">ISA2 IPS REST API Profile</a></cite>]) in de realisatie van een B2B betrouwbare veilige communicatie tussen 2 systemen. Het profile is gebaseerd op de RFC7515 (Appenfix F) en is toegepast voor REST API beveiligingsmechanisme op zowel payload als berichtniveau.</li>
 </ul>
-<p>De ondertekening van de berichten en de payload-berichten kan makkelijk gerealiseerd worden met behulp van JAdES-B-B  als een JAdES-compliant JWT detached. Het is een eenvoudige JSON-structuur ondertekening. Daardoor kan het makkelijk door de client-applicaties gebruikt en gerealiseerd worden.  </p>
-<p>JAdES–handtekening detached verandert ook de payload-structuur niet. Dat betekent dat een client die de validatie van handtekening niet ondersteunt, kan blijven werken alsof er geen handtekening is toegepast.
-JAdES–handtekening detached kan getransporteerd worden met behulp van een HTTP-header, waardoor de aanwezigheid niet opdringerig is en gemakkelijk is te transporteren.</p>
-<p>In een juridisch context wordt de JAdES-handtekening verrijkt met verschillende velden in de handtekening bv: tijdstip ondertekening; commitment (reden) van de ondertekening; toevoegen van de counter-ondertekening;</p>
+<p>Een aantal redenen om dit beveiligingsmechanisme te gebruiken:  </p>
+<p>De ondertekening met het ETSI-JAdES–Detached profile met het HttpHeaders-mechanism, is een JWS op basis van een eenvoudige JSON structuur en hierdoor gemakkelijk te ontwikkelen.   </p>
+<p>De JAdES–handtekening detached verandert de payload-structuur niet. Dat betekent dat een client die de validatie van handtekening niet ondersteunt, kan blijven werken alsof er geen handtekening is toegepast.
+JAdES–handtekening detached kan getransporteerd worden met behulp van een HTTP-header, waardoor de aanwezigheid niet opdringerig is en gemakkelijk is te transporteren. </p>
 <ul>
 <li>Realisatie van de archiveringseisen van de ondertekende communicatie berichten tussen 2 systemen.</li>
 </ul>
-<p>Met de implementatie van de JAdES-B-LT en JAdES-B-LTA profielen kunnen de JAdES-handtekeningen oneindig worden verlengd t.b.v archiveringseisen </p>
+<p>Met de implementatie van de JAdES-B-LT en JAdES-B-LTA profielen kunnen de JAdES-handtekeningen oneindig worden verlengd t.b.v archiveringseisen.</p>
 </section></section><section id="bijlage-a-httpbis-message-signatures"><div class="header-wrapper"><h3 id="x1-6-bijlage-a-httpbis-message-signatures"><bdi class="secno">1.6 </bdi>BIJLAGE A : HTTPBIS-Message-Signatures</h3><a class="self-link" href="#bijlage-a-httpbis-message-signatures" aria-label="Permalink for Section 1.6"></a></div>
 <p>Zie [<cite><a class="bibref" data-link-type="biblio" href="#bib-http-messagesig" title="HTTP Message Signatures">HTTP-MessageSig</a></cite>]</p>
 <p>Voorbeelden:</p>
@@ -428,7 +582,7 @@ Het kan alleen de ’protected headers’ bevatten.<br>Het wordt alleen in het J
 Het kan beide type headers (protected en unprotected) bevatten en ondersteunt meerdere ondertekeningen van hetzelfde object. 
 De JAdES-BASELINE-T/-LT/-LTA handtekening profielen kunnen dit serialization format gebruiken. Het JAdES- handtekening serialization format ondersteunt de realisatie van de ’multiple-signatures’ en ’counter-signatures’</li>
 <li>JSON Flattened Serialization
-Het kan gebruikt worden zoals één signature gebruikt wordt. De JAdES-BASELINE-T/-LT/-LTA signature profielen kunnen dit serialization format gebruiken. 
+Het kan gebruikt worden als één signature gebruikt wordt. De JAdES-BASELINE-T/-LT/-LTA signature profielen kunnen dit serialization format gebruiken. 
 Deze JAdES- handtekening flattened serialization format ondersteunt de realisatie van de   ’counter-signatures’.
 Het JWS object wordt als een HTTP header-veld: "x-jws-signature“ toegevoegd  in de HTTP-bericht-headers.</li>
 </ul>
@@ -440,7 +594,7 @@ Het JWS object wordt als een HTTP header-veld: "x-jws-signature“ toegevoegd  i
 Deze format kan alleen één handtekening bevatten. JAdES enveloping ondersteunt counter-signatures. </p>
 </li>
 <li><p>DETACHED:  het JWS Payload is niet toegevoegd in het JAdES signature.<br>Om deze signature te valideren is het oorspronkelijke bericht nodig.
-JAdES-detached ondersteunt multiple-siganture (parallel-sigantures)  en ook counter-signatures.
+JAdES-detached ondersteunt multiple-signatures (parallel-signatures)  en ook counter-signatures.
 Met JAdES-handtekening is het niet mogelijk alleen een deel van het JSON payload bericht te ondertekenen. Met JAdES-handtekening is het JSON payload bericht volledig ondertekend. Indien nodig zouden additioneel de rest van de payload als aparte berichten gestuurd moeten worden naar de betreffende partij.</p>
 </li>
 </ul>
@@ -453,17 +607,60 @@ Met JAdES-handtekening is het niet mogelijk alleen een deel van het JSON payload
 <li>Het B-LT-level bevat in de handtekening de elementen van het profiel B-T plus het materiaal dat nodig is voor het valideren van de handtekening in het handtekeningdocument. Dit niveau is bedoeld om de beschikbaarheid van het validatiemateriaal op lange termijn te realiseren.</li>
 <li>Het B-LTA-level bevat in de handtekening de elementen van het profiel B-LT plus de  elektronische tijdstempels die de validatie van de handtekening lang na het genereren ervan mogelijk maken. Dit niveau is bedoeld om de beschikbaarheid en integriteit van het validatiemateriaal op lange termijn te realiseren.</li>
 </ul>
+<ol start="5">
+<li>De JAdES-Detached HttpHeader specifiek voor de realisatie van de beveiliging REST-API  van het berichtniveau introduceert een aantal verplichte elementen zoals:</li>
+</ol>
+<ul>
+<li>de signed "SigD" parameter is aanwezig in de JWT-headers.</li>
+<li>de "mId" parameter is gevuld met:  "<a href="http://uri.etsi.org/19182/HttpHeaders">http://uri.etsi.org/19182/HttpHeaders</a>".</li>
+<li>de "alg" parameter is ingevuld met de juiste  waarde, afhankelijk van het gebruikte algoritme.</li>
+<li>een aantal elementen in de "SigD" parameter zoals:<ul>
+<li>"(request-target)" bevat de HTTP-aanvraag-URI; </li>
+<li>"host" waaraan het bericht verzonden is, optioneel;</li>
+<li>"origin" met de informatie: scheme, hostname, port waarvandaan het  request gestuurd is ;</li>
+<li>"content-encoding" optioneel;</li>
+<li>"content-type" optioneel;</li>
+<li>"content-length" optioneel;</li>
+<li>"digest" met de hash-waarde van de HTTP-payload;</li>
+</ul>
+</li>
+<li>de JWS detached handtekening voor de beveiliging van het berichtniveau en/of beveiliging van het payload-bericht wordt toegevoegd in een HTTP-Header van het bericht.</li>
+</ul>
 </section></section>
-  
-  
-  
-  
+  <script>
+    let content = "";
+
+    const getClass = function(key) {
+      if (respecConfig.content[key]!==""){return <code> class="${respecConfig.content[key]}"</code>}
+    }
+
+    for (let contentKey in respecConfig.content) {
+      content += <code>&lt;section data-include-format="markdown" data-include="${contentKey}.md" ${getClass(contentKey)||""}&gt;&lt;/section&gt;</code>
+    }
+
+    document.getElementById("sotd").insertAdjacentHTML('afterend', content);
+  </script>
+  <section id="conformance"><div class="header-wrapper"><h2 id="x2-conformiteit"><bdi class="secno">2. </bdi>Conformiteit</h2><a class="self-link" href="#conformance" aria-label="Permalink for Section 2."></a></div><p>Naast onderdelen die als niet normatief gemarkeerd zijn, zijn ook alle diagrammen, voorbeelden, en noten in dit document niet normatief. Verder is alles in dit document normatief.</p></section>
+  <section id="tof"></section>
+  <section id="index" class="appendix"><div class="header-wrapper"><h2 id="a-index"><bdi class="secno">A. </bdi>Index</h2><a class="self-link" href="#index" aria-label="Permalink for Appendix A."></a></div><section id="index-defined-here">
+    <div class="header-wrapper"><h3 id="a-1-begrippen-gedefinieerd-door-deze-specificatie"><bdi class="secno">A.1 </bdi>Begrippen gedefinieerd door deze specificatie</h3><a class="self-link" href="#index-defined-here" aria-label="Permalink for Appendix A.1"></a></div>
+    <ul class="index">
+    
+  </ul>
+  </section><section id="index-defined-elsewhere">
+    <div class="header-wrapper"><h3 id="a-2-begrippen-gedefinieerd-door-verwijzing"><bdi class="secno">A.2 </bdi>Begrippen gedefinieerd door verwijzing</h3><a class="self-link" href="#index-defined-elsewhere" aria-label="Permalink for Appendix A.2"></a></div>
+    <ul class="index">
+    
+  </ul>
+  </section></section>
 
 
-<section id="references" class="appendix"><div class="header-wrapper"><h2 id="a-referenties"><bdi class="secno">A. </bdi>Referenties</h2><a class="self-link" href="#references" aria-label="Permalink for Appendix A."></a></div><section id="informatieve-referenties">
-    <div class="header-wrapper"><h3 id="a-1-informatieve-referenties"><bdi class="secno">A.1 </bdi>Informatieve referenties</h3><a class="self-link" href="#informatieve-referenties" aria-label="Permalink for Appendix A.1"></a></div>
+<section id="references" class="appendix"><div class="header-wrapper"><h2 id="b-referenties"><bdi class="secno">B. </bdi>Referenties</h2><a class="self-link" href="#references" aria-label="Permalink for Appendix B."></a></div><section id="informatieve-referenties">
+    <div class="header-wrapper"><h3 id="b-1-informatieve-referenties"><bdi class="secno">B.1 </bdi>Informatieve referenties</h3><a class="self-link" href="#informatieve-referenties" aria-label="Permalink for Appendix B.1"></a></div>
     <dl class="bibliography"><dt id="bib-http-messagesig">[HTTP-MessageSig]</dt><dd>
       <a href="https://www.ietf.org/archive/id/draft-ietf-httpbis-message-signatures-15.html"><cite>HTTP Message Signatures</cite></a>. URL: <a href="https://www.ietf.org/archive/id/draft-ietf-httpbis-message-signatures-15.html">https://www.ietf.org/archive/id/draft-ietf-httpbis-message-signatures-15.html</a>
+    </dd><dt id="bib-isa2 ips rest api profile">[ISA2 IPS REST API Profile]</dt><dd>
+      <a href="https://ec.europa.eu/digital-building-blocks/wikis/download/attachments/323290750/%28ISA2%29.%28eDelivery%29.%28Piloting a REST API extension of CEF eDelivery%29.%28ISA%C2%B2 IPS REST API Profile%29.%28v1.0%29.pdf?api=v2"><cite>ISA2 IPS REST API Profile</cite></a>. URL: <a href="https://ec.europa.eu/digital-building-blocks/wikis/download/attachments/323290750/%28ISA2%29.%28eDelivery%29.%28Piloting a REST API extension of CEF eDelivery%29.%28ISA%C2%B2 IPS REST API Profile%29.%28v1.0%29.pdf?api=v2">https://ec.europa.eu/digital-building-blocks/wikis/download/attachments/323290750/%28ISA2%29.%28eDelivery%29.%28Piloting a REST API extension of CEF eDelivery%29.%28ISA%C2%B2 IPS REST API Profile%29.%28v1.0%29.pdf?api=v2</a>
     </dd><dt id="bib-jades">[JAdES]</dt><dd>
       <a href="https://www.etsi.org/deliver/etsi_ts/119100_119199/11918201/01.01.01_60/ts_11918201v010101p.pdf"><cite>JAdES digital signatures</cite></a>. URL: <a href="https://www.etsi.org/deliver/etsi_ts/119100_119199/11918201/01.01.01_60/ts_11918201v010101p.pdf">https://www.etsi.org/deliver/etsi_ts/119100_119199/11918201/01.01.01_60/ts_11918201v010101p.pdf</a>
     </dd></dl>
@@ -691,4 +888,4 @@ function hidePanel(panel) {
   panel.hidden = true;
   panel.classList.remove("docked");
 }
-})()</script><script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script></body></html>
+})()</script><div class="sidelabel" style="background-color: #014273;">KPAPI Handreiking - Werkversie</div><script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script></body></html>
