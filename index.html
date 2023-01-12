@@ -4,21 +4,35 @@
 <head>
   <meta content="text/html; charset=utf-8" http-equiv="content-type">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Vergelijking REST API Signing Standaarden </title>
+  <script src="https://cdn.jsdelivr.net/gh/digitalbazaar/respec-mermaid@1.0.1/dist/main.js" class="remove"></script>
+  <script src="js/organisation-config.js" class="remove"></script>
   <script src="js/config.js" class="remove"></script>
-  <link rel="shortcut icon" type="image/x-icon" href="https://publicatie.centrumvoorstandaarden.nl/respec/style/logos/logius.ico" />
-  <script src="https://publicatie.centrumvoorstandaarden.nl/respec/builds/respec-logius.js" class="remove" async></script>
+  <script class="remove"> respecConfig = {...organisationConfig, ...respecConfig}</script>
+  <script>document.title = respecConfig.title</script>
+  <title>Default</title>
+  <link rel="shortcut icon" type="image/x-icon" href="https://gitdocumentatie.logius.nl/publicatie/respec/style/logos/logius.ico" />
+  <script src="https://gitdocumentatie.logius.nl/publicatie/respec/builds/respec-nlgov.js" class="remove" async></script>
 </head>
 
 <body>
   <section id="abstract" data-include-format="markdown" data-include="abstract.md"></section>
   <section id="sotd"></section><!-- Wordt automatisch gevuld -->
-  <section data-include-format="markdown" class="informative" data-include="ch01.md"></section>
-  <!-- <section data-include-format="markdown" data-include="ch02.md"></section> -->
-  <!-- Hieronder optionele secties. Worden automatisch gevuld -->
-  <!--<section id='conformance'></section>
-  <section id='tof'></section> -->
-  <!--<section id="index"></section> -->
+  <script>
+    let content = "";
+
+    const getClass = function(key) {
+      if (respecConfig.content[key]!==""){return ` class="${respecConfig.content[key]}"`}
+    }
+
+    for (let contentKey in respecConfig.content) {
+      content += `<section data-include-format="markdown" data-include="${contentKey}.md" ${getClass(contentKey)||""}></section>`
+    }
+
+    document.getElementById("sotd").insertAdjacentHTML('afterend', content);
+  </script>
+  <section id='conformance'></section>
+  <section id='tof'></section>
+  <section id="index"></section>
 </body>
 
 </html>
