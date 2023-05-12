@@ -61,7 +61,7 @@ var respecConfig = {
       title: "JAdES digital signatures",
     },
     "HTTP-MessageSig": {
-      href: "https://www.ietf.org/archive/id/draft-ietf-httpbis-message-signatures-16.html",
+      href: "https://datatracker.ietf.org/doc/draft-ietf-httpbis-message-signatures/",
       title: "HTTP Message Signatures",
     },
     "ISA2 IPS REST API Profile": {
